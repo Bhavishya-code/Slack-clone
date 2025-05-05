@@ -1,10 +1,20 @@
+"use client"
+import { useAuthActions } from "@convex-dev/auth/react";
 import { Button } from "@/components/ui/button";
-import { AuthScreen } from "@/features/auth/components/auth-screen";
 
-export default function Home() {
-return(
-   <AuthScreen/>
 
-      
-    );
-}
+ import React from 'react'
+
+ const Home = () => {
+    return (
+        <div >
+            LOGGED IN ...
+        </div>
+    )
+ }
+ 
+ export default Home;
+
+
+ 
+
