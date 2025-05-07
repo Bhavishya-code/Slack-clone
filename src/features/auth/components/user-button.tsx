@@ -11,12 +11,14 @@ import {
     DropdownMenuTrigger,
   } from "@/components/ui/dropdown-menu"
 import { useCurrentUser } from "../hooks/use-current-user"
+import { useRouter } from "next/navigation"
 
 
   
 export  const UserButton = () => {
     const { signOut } = useAuthActions();
     const {data, isLoading} = useCurrentUser();
+  
 
     if(isLoading){
         return <Loader className="size-4 animate-spin text-muted-foreground"/>
@@ -28,6 +30,7 @@ export  const UserButton = () => {
 
     const avatarFallback = name!.charAt(0).toUpperCase();
 
+ 
     return (
         <DropdownMenu modal={false}>
             <DropdownMenuTrigger className="outline-none relative">
@@ -40,7 +43,7 @@ export  const UserButton = () => {
             </DropdownMenuTrigger>
 
             <DropdownMenuContent align="center" side="right" className="w-60">
-            <DropdownMenuItem onClick={() => signOut()} className="h-10">
+            <DropdownMenuItem onClick={()=> signOut()} className="h-10">
                 <LogOut  className="size-4 mr-2"/>
                     Log Out
             </DropdownMenuItem>
