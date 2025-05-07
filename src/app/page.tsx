@@ -6,9 +6,11 @@ import { Button } from "@/components/ui/button";
  import React from 'react'
 
  const Home = () => {
+    const { signOut } = useAuthActions();
     return (
         <div >
             LOGGED IN ...
+            <Button onClick={() =>  signOut()}>Sign out</Button>
         </div>
     )
  }
