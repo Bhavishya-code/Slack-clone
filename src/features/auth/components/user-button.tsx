@@ -10,7 +10,7 @@ import {
     DropdownMenuSeparator,
     DropdownMenuTrigger,
   } from "@/components/ui/dropdown-menu"
-import { useCurrentUser } from "../hooks/use-current-user"
+import { useCurrentUser } from "../api/use-current-user"
 import { useRouter } from "next/navigation"
 
 
